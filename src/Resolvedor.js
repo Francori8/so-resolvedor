@@ -49,11 +49,12 @@ class GraficoGann extends Resolvedor{
            
             for(let i = 0 ; i< tick ; i++){
                 let valor = " "
-                if (rafaga <= 0 ||  (i+1 >= tiempoLlegada && i != inicio )){
+                if (rafaga <= 0 ||  (i+1 > tiempoLlegada && i != inicio )){
                     
                     if(rafaga<= 0){
                         valor = "/"
-                    }else{valor = "-"}
+                    }else{valor = "-"    
+                }
                     
                 }else if(i >= tiempoLlegada && i == inicio){
                    
@@ -62,7 +63,7 @@ class GraficoGann extends Resolvedor{
                     inicio++
                 }
            
-               
+              
                 tablaTemporal.push(valor)
             }
             tablasProceso.push(tablaTemporal)
